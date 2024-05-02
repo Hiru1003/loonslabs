@@ -25,10 +25,10 @@ const login = async (req, res) => {
 
       return res.status(200).json({ msg: "user logged in", token });
     } else {
-      return res.status(400).json({ msg: "Bad password" });
+      return res.status(400).json({ msg: "Weak password" });
     }
   } else {
-    return res.status(400).json({ msg: "Bad credentails" });
+    return res.status(400).json({ msg: "Weak credentails" });
   }
 };
 

@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Image from "../assets/image.png";
-import Logo from "../assets/logo.png";
-import GoogleSvg from "../assets/icons8-google.svg";
 import { FaEye } from "react-icons/fa6";
 import { FaEyeSlash } from "react-icons/fa6";
 import "../styles/Login.css";
@@ -28,7 +26,7 @@ const Login = () => {
       };
       try {
         const response = await axios.post(
-          "http://localhost:3000/api/v1/login",
+          "http://localhost:6000/api/v1/login",
           formData
         );
         localStorage.setItem('auth', JSON.stringify(response.data.token));

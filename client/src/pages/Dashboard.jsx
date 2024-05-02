@@ -18,7 +18,7 @@ const Dashboard = () => {
     };
 
     try {
-      const response = await axios.get("http://localhost:3000/api/v1/dashboard", axiosConfig);
+      const response = await axios.get("http://localhost:6000/api/v1/dashboard", axiosConfig);
       setData({ msg: response.data.msg, luckyNumber: response.data.secret });
     } catch (error) {
       toast.error(error.message);
@@ -37,7 +37,7 @@ const Dashboard = () => {
 
   return (
     <div className='dashboard-main'>
-      <h1>Dashboard</h1>
+      <h1>Dispensary Dashboard</h1>
       <p>Hi { data.msg }! { data.luckyNumber }</p>
       <Link to="/logout" className="logout-button">Logout</Link>
     </div>

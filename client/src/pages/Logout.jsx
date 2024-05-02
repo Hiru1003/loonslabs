@@ -10,7 +10,7 @@ const Logout = () => {
         localStorage.removeItem("auth");
         setTimeout(() => {
             navigate("/");
-        }, 3000);
+        }, 6000);
     }, []);
 
   return (

@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Image from "../assets/image.png";
-import Logo from "../assets/logo.png";
-import GoogleSvg from "../assets/icons8-google.svg";
 import { FaEye } from "react-icons/fa6";
 import { FaEyeSlash } from "react-icons/fa6";
 import "../styles/Register.css";
@@ -35,7 +33,7 @@ const Login = () => {
           password
         };
         try{
-        const response = await axios.post("http://localhost:3000/api/v1/register", formData);
+        const response = await axios.post("http://localhost:6000/api/v1/register", formData);
          toast.success("Registration successfull");
          navigate("/login");
        }catch(err){

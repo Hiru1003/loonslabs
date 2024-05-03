@@ -26,7 +26,7 @@ const Login = () => {
       };
       try {
         const response = await axios.post(
-          "http://localhost:6000/api/v1/login",
+          "http://localhost:2000/api/v1/login",
           formData
         );
         localStorage.setItem('auth', JSON.stringify(response.data.token));

@@ -4,7 +4,7 @@ require('express-async-errors');
 
 const connectDB = require("./db/connect");
 const express = require("express");
-const cors = require('cors')
+const cors = require('cors');
 const app = express();
 const mainRouter = require("./routes/user");
 
@@ -24,7 +24,7 @@ const start = async () => {
         })
 
     } catch (error) {
-       console.log(error); 
+        console.error(error)
     }
 }
 

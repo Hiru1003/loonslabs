@@ -4,10 +4,10 @@ const router = express.Router();
 const { login, register, dashboard, getAllUsers } = require("../controllers/user");
 const authMiddleware = require('../middleware/auth')
 
-router.post("/login", login); // Route for user login
-router.post("/register", register); // Route for user registration
-router.get("/dashboard", authMiddleware, dashboard); // Route to access the dashboard (requires authentication)
-router.get("/users", getAllUsers); // Route to get all users
+router.route("/login").post(login);
+router.route("/register").post(register);
+router.route("/dashboard").get(authMiddleware, dashboard);
+router.route("/users").get(getAllUsers);
 
 
 module.exports = router;

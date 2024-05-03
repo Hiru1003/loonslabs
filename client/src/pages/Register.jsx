@@ -33,7 +33,7 @@ const Login = () => {
           password
         };
         try{
-        const response = await axios.post("http://localhost:2000/api/v1/register", formData);
+        const response = await axios.post("https://loonslabs.onrender.com/api/v1/register", formData);
          toast.success("Registration successfull");
          navigate("/login");
        }catch(err){

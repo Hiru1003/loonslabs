@@ -18,7 +18,7 @@ const Dashboard = () => {
     };
 
     try {
-      const response = await axios.get("http://localhost:2000/api/v1/dashboard", axiosConfig);
+      const response = await axios.get("https://loonslabs.onrender.com/api/v1/dashboard", axiosConfig);
       setData({ msg: response.data.msg, luckyNumber: response.data.secret });
     } catch (error) {
       toast.error(error.message);
